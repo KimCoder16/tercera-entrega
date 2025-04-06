@@ -75,6 +75,14 @@ nav li:hover {
   background-color: #848484;
 }
 
+/* body */
+body {
+  font-family: "Libre baskerville";
+  color: #8f8e8e;
+  font-size: 80%;
+  background-color: #fffbf4;
+}
+
 /* index.html */
 .centrado-negrita {
   text-align: center;
@@ -114,40 +122,33 @@ nav li:hover {
 main ol {
   list-style: none;
   padding: 0;
-  text-align: center;
-  font-family: "Poppins", sans-serif; /*lista */
+  font-family: "Poppins", sans-serif; /* Lista */
+  display: flex;
+  flex-wrap: wrap; /* Para que las cajas se adapten */
+  justify-content: center;
 }
 
 main ol li {
   background-color: #fdd673;
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px;
-  width: 30%;
+  width: 100%; /* Por defecto ocupa toda la pantalla */
   box-sizing: border-box;
   text-align: center;
+  border-radius: 10px; /* Añade bordes redondeados para mejor diseño */
 }
 
-main ol li + p {
-  margin-bottom: 10px;
+main ol li img {
+  width: 100%;
+  height: auto; /* Garantiza que las imágenes se ajusten proporcionalmente */
+  margin-top: 10px;
 }
 
-main ol li + img {
-  width: 30%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
+@media (min-width: 768px) {
+  main ol li {
+    width: 33.333%; /* En pantallas más grandes ocupa un tercio */
+  }
 }
-
-section .cajas {
-  display: grid;
-}
-
-.cajas > div {
-  background-color: #fdd673;
-  padding: 20px; /* Espaciado interno para que el contenido no quede pegado */
-  text-align: center; /* Centrè el texto dentro de las cajas */
-}
-
 /* contactanos.html*/
 .contact-page {
   text-align: center;
