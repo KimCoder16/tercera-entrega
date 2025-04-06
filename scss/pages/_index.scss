@@ -1,0 +1,23 @@
+/* index.html */
+
+.centrado-negrita {
+    text-align: center;
+    font-weight: bold;
+}
+
+.izquierda-reducido {
+    text-align: left;
+    width: 45%; 
+    font-size: 400%;
+    margin-left: 5%;
+}
+
+.linea-horizontal {
+    border: none;
+    border-top: 2px solid; 
+    color: inherit; 
+    background-color: inherit; 
+    height: 1px;
+    margin: 20px 0; 
+    width: 100%; 
+} 
