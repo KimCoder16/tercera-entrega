@@ -1,36 +1,52 @@
 /* index.html */
 
-.centrado-negrita {
+.header-content {
     text-align: center;
-    font-weight: bold;
-}
 
-.izquierda-reducido {
-    text-align: left;
-    width: 45%; 
-    font-size: 400%;
-    margin-left: 5%;
-}
-
-.linea-horizontal {
-    border: none;
-    border-top: 2px solid; 
-    color: inherit; 
-    background-color: inherit; 
-    height: 1px;
-    margin: 20px 0; 
-    width: 100%; 
-} 
-
-/* Ajuste para que las imágenes se adapten mejor */
-.carousel-inner img {
-    height: 400px; /* Altura máxima deseada */
-    object-fit: cover; /* Mantén proporciones y recorta el exceso */
-}
-
-@media (max-width: 768px) {
-    /* Para dispositivos móviles */
-    .carousel-inner img {
-        height: 300px; /* Ajuste de altura menor en pantallas pequeñas */
+    h1 {
+        font-size: 2.5rem; /* Ajuste opcional si necesitas darle estilo */
     }
+
+    .centrado-negrita {
+        font-weight: bold;
+    }
+
+    .carousel {
+        &-inner {
+            img {
+                
+                object-fit: cover; /* Mantén proporciones y recorta el exceso */
+
+                @media (max-width: 768px) {
+                    height: 300px; /* Ajuste de altura menor en pantallas pequeñas */
+                }
+            }
+        }
+
+        &-control-prev,
+        &-control-next {
+            button {
+                display: block; /* Opcional: estilos para los controles */
+            }
+        }
+    }
+
+    .izquierda-reducido {
+        text-align: left;
+        width: 45%;
+        font-size: 400%;
+        margin-left: 5%;
+    }
+
+    .linea-horizontal {
+        border: none;
+        border-top: 2px solid;
+        color: inherit;
+        background-color: inherit;
+        height: 1px;
+        margin: 20px 0;
+        width: 100%;
+    }
+
 }
+

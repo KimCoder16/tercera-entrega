@@ -84,19 +84,33 @@ body {
 }
 
 /* index.html */
-.centrado-negrita {
+.header-content {
   text-align: center;
+}
+.header-content h1 {
+  font-size: 2.5rem; /* Ajuste opcional si necesitas darle estilo */
+}
+.header-content .centrado-negrita {
   font-weight: bold;
 }
-
-.izquierda-reducido {
+.header-content .carousel-inner img {
+  object-fit: cover; /* Mantén proporciones y recorta el exceso */
+}
+@media (max-width: 768px) {
+  .header-content .carousel-inner img {
+    height: 300px; /* Ajuste de altura menor en pantallas pequeñas */
+  }
+}
+.header-content .carousel-control-prev button, .header-content .carousel-control-next button {
+  display: block; /* Opcional: estilos para los controles */
+}
+.header-content .izquierda-reducido {
   text-align: left;
   width: 45%;
   font-size: 400%;
   margin-left: 5%;
 }
-
-.linea-horizontal {
+.header-content .linea-horizontal {
   border: none;
   border-top: 2px solid;
   color: inherit;
@@ -106,18 +120,6 @@ body {
   width: 100%;
 }
 
-/* Ajuste para que las imágenes se adapten mejor */
-.carousel-inner img {
-  height: 400px; /* Altura máxima deseada */
-  object-fit: cover; /* Mantén proporciones y recorta el exceso */
-}
-
-@media (max-width: 768px) {
-  /* Para dispositivos móviles */
-  .carousel-inner img {
-    height: 300px; /* Ajuste de altura menor en pantallas pequeñas */
-  }
-}
 /* asi funciona.html*/
 main ol {
   list-style: none;
@@ -127,7 +129,6 @@ main ol {
   flex-wrap: wrap; /* Para que las cajas se adapten */
   justify-content: center;
 }
-
 main ol li {
   background-color: #fdd673;
   margin: 20px;
@@ -137,46 +138,41 @@ main ol li {
   text-align: center;
   border-radius: 10px; /* Añade bordes redondeados para mejor diseño */
 }
-
-main ol li img {
-  width: 100%;
-  height: auto; /* Garantiza que las imágenes se ajusten proporcionalmente */
-  margin-top: 10px;
-}
-
 @media (min-width: 768px) {
   main ol li {
     width: 33.333%; /* En pantallas más grandes ocupa un tercio */
   }
 }
+main ol img {
+  width: 100%;
+  height: auto; /* Garantiza que las imágenes se ajusten proporcionalmente */
+  margin-top: 10px;
+}
+
 /* contactanos.html*/
 .contact-page {
   text-align: center;
 }
-
 .contact-page p {
   margin-bottom: 90px;
 }
-
-.contact-page label {
+.contact-page p label {
   font-size: 300%;
   display: block;
   margin-bottom: 10px;
 }
-
-.contact-page input, .contact-page textarea {
+.contact-page input,
+.contact-page textarea {
   background-color: #ececec;
   color: #8f8e8e;
   margin-bottom: 80px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto; /* Simplificado con shorthand */
   text-align: center;
   width: 40%;
   height: 150%;
   font-size: 120%;
 }
-
 .contact-page .submit-btn {
   background-color: #bdbcfd;
   color: white;
@@ -185,9 +181,7 @@ main ol li img {
   border: none;
   cursor: pointer;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin: 20px auto 0; /* Compacta los márgenes */
 }
 
 /* nuestros servicios.html*/

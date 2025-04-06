@@ -7,28 +7,21 @@ main ol {
     display: flex;
     flex-wrap: wrap; /* Para que las cajas se adapten */
     justify-content: center;
-}
-
-main ol li {
-    background-color: #fdd673;
-    margin: 20px;
-    padding: 20px;
-    width: 100%; /* Por defecto ocupa toda la pantalla */
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: 10px; /* Añade bordes redondeados para mejor diseño */
-}
-
-main ol li img {
-    width: 100%;
-    height: auto; /* Garantiza que las imágenes se ajusten proporcionalmente */
-    margin-top: 10px;
-}
-
-@media (min-width: 768px) {
-    main ol li {
-        width: 33.333%; /* En pantallas más grandes ocupa un tercio */
+    li {
+        background-color: #fdd673;
+        margin: 20px;
+        padding: 20px;
+        width: 100%; /* Por defecto ocupa toda la pantalla */
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 10px; /* Añade bordes redondeados para mejor diseño */
+        @media (min-width: 768px) {
+            width: 33.333%; /* En pantallas más grandes ocupa un tercio */
+        }
+    }
+    img {
+        width: 100%;
+        height: auto; /* Garantiza que las imágenes se ajusten proporcionalmente */
+        margin-top: 10px;
     }
 }
-
-
