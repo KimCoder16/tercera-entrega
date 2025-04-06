@@ -1,5 +1,19 @@
 
+@use 'base/generales';
+
+@use 'components/footer';
+@use 'components/header';
+@use 'components/body';
+
+@use 'pages/index';
+@use 'pages/asi-funciona';
+@use 'pages/contactanos';
+@use 'pages/nuestros-servicios';
+@use 'pages/sobre-nosotros';
+
+
+
 *{
     margin: 0;
     padding: 0;
-}
+} 

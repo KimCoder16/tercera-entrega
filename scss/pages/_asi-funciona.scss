@@ -1,0 +1,39 @@
+/* asi funciona.html*/
+
+main ol {
+    list-style: none; 
+    padding: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /*lista */
+}
+
+main ol li {
+    background-color: #fdd673;
+    margin: 20px auto; 
+    padding: 20px;
+    width: 30%; 
+    box-sizing: border-box; 
+    text-align: center; 
+}
+
+main ol li + p {
+    margin-bottom: 10px; 
+}
+
+main ol li + img {
+    width: 30%;
+    height: auto; 
+    display: block;
+    margin: 10px auto;
+}
+
+section .cajas {
+    display: grid;
+}
+
+.cajas > div {
+    background-color: #fdd673; 
+    padding: 20px; /* Espaciado interno para que el contenido no quede pegado */
+    text-align: center; /* Centrè el texto dentro de las cajas */
+    
+}

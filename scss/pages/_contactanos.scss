@@ -1,0 +1,40 @@
+/* contactanos.html*/
+.contact-page {
+    text-align: center;
+}
+
+.contact-page p {
+    margin-bottom: 90px;
+}
+
+.contact-page label {
+    font-size: 300%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-page input, .contact-page textarea {
+    background-color: #ececec;
+    color: #8f8e8e;
+    margin-bottom: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 40%;
+    height: 150%;
+    font-size: 120%;
+}
+
+.contact-page .submit-btn {
+    background-color: #bdbcfd;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    padding: 20px 80px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
