@@ -14,9 +14,7 @@
     .carousel {
         &-inner {
             img {
-                
                 object-fit: cover; /* Mantén proporciones y recorta el exceso */
-
                 @media (max-width: 768px) {
                     height: 300px; /* Ajuste de altura menor en pantallas pequeñas */
                 }
