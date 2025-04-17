@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* titulos */
+/* Nota: para compilar sass el comando es..> sass --watch scss/style.scss:assets/css/style.css */
 h1 {
   text-align: center;
   color: #6562df;
@@ -30,8 +31,9 @@ h1 + img {
 }
 
 /* editanto el footer */
+/* editanto el footer */
 footer {
-  background-color: #404040;
+  background-image: linear-gradient(180deg, #808080 10%, #000000 90%);
   color: #ffffff;
   text-align: center;
   padding: 20px 0;
@@ -125,29 +127,34 @@ body {
 main ol {
   list-style: none;
   padding: 0;
-  font-family: "Poppins", sans-serif; /* Lista */
+  font-family: "Poppins", sans-serif;
   display: flex;
-  flex-wrap: wrap; /* Para que las cajas se adapten */
+  flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
 }
 main ol li {
   background-color: #fdd673;
-  margin: 20px;
+  margin: 10px;
   padding: 20px;
-  width: 100%; /* Por defecto ocupa toda la pantalla */
+  width: 100%;
   box-sizing: border-box;
   text-align: center;
-  border-radius: 10px; /* Añade bordes redondeados para mejor diseño */
+  border-radius: 10px;
 }
 @media (min-width: 768px) {
   main ol li {
-    width: 33.333%; /* En pantallas más grandes ocupa un tercio */
+    width: calc(33.333% - 20px);
   }
 }
 main ol img {
   width: 100%;
-  height: auto; /* Garantiza que las imágenes se ajusten proporcionalmente */
+  height: auto;
   margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+main ol img:hover {
+  transform: scale(1.1);
 }
 
 /* contactanos.html*/
