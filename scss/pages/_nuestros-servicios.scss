@@ -1,48 +1,82 @@
 /* nuestros servicios.html*/
 
-body.nuestros-servicios .melamina-img {
-    width: 100%; 
-    height: auto; 
-    display: block;
-    margin: 0 auto; 
-}
+body.nuestros-servicios {
 
-body.nuestros-servicios .servicios-list {
-    text-align: center; 
-    font-weight: bold; 
-    font-size: 120%; 
-    margin-top: 60px; 
-    list-style: none; 
-    padding: 0;
-}
+    .melamina-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-body.nuestros-servicios .servicios-list li {
-    margin: 10px 0; 
-}
+    .servicios-list {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-top: 3.75rem;
+        list-style: none;
+        padding: 0;
 
-body.nuestros-servicios .opiniones {
-    font-size: 300%; 
-    margin-top: 80px; 
-}
+        li {
+            margin: 0.625rem 0;
+            padding: 0.5rem;
+            background-color: #f8f9fa;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
 
-body.nuestros-servicios .opinion {
-    background-color: #ececec; 
-    margin: 20px auto; 
-    padding: 20px;
-    width: 70%; 
-    box-sizing: border-box; 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-}
+        &:hover {
+            background-color: #e2e6ea;
+            }
+        }
 
-body.nuestros-servicios .opinion-img {
-    width: 60%; 
-    height: auto; 
-}
+    }
 
-body.nuestros-servicios .opinion-text {
-    width: 35%; 
-    font-size: 150%; 
-    margin-left: 10px; 
-}
+    .opiniones {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .opinion {
+        background-color: #ececec;
+        margin: 1.25rem auto;
+        padding: 1.25rem;
+        width: 70%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        }
+
+        .opinion-img {
+            width: 60%;
+            height: auto;
+            border-radius: 0.75rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        }
+
+        .opinion-text {
+            width: 35%;
+            font-size: 1.2rem;
+            margin-left: 0.625rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-left: 0;
+        }
+        }
+    }
+    }

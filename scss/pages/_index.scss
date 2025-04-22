@@ -1,50 +1,91 @@
-/* index.html */
+/* index.scss */
 
 .header-content {
     text-align: center;
-
+  
     h1 {
-        font-size: 2.5rem; /* Ajuste opcional si necesitas darle estilo */
+      font-size: 2.5rem;
     }
-
+  
     .centrado-negrita {
-        font-weight: bold;
+      font-weight: bold;
     }
-
+  
     .carousel {
-        &-inner {
-            img {
-                object-fit: cover; /* Mantén proporciones y recorta el exceso */
-                @media (max-width: 768px) {
-                    height: 300px; /* Ajuste de altura menor en pantallas pequeñas */
-                }
-            }
+      &-inner {
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+  
+          @media (max-width: 768px) {
+            height: 300px;
+          }
         }
-
-        &-control-prev,
-        &-control-next {
-            button {
-                display: block; /* Opcional: estilos para los controles */
-            }
+      }
+  
+      &-control-prev,
+      &-control-next {
+        button {
+          display: block;
         }
+      }
     }
-
+  
     .izquierda-reducido {
-        text-align: left;
-        width: 45%;
-        font-size: 400%;
+      text-align: left;
+      width: 45%;
+      font-size: 400%;
+      margin-left: 5%;
+  
+      @media (max-width: 768px) {
+        width: 90%;
+        font-size: 200%;
         margin-left: 5%;
+      }
     }
-
+  
     .linea-horizontal {
-        border: none;
-        border-top: 2px solid;
-        color: inherit;
-        background-color: inherit;
-        height: 1px;
-        margin: 20px 0;
-        width: 100%;
+      border: none;
+      border-top: 2px solid;
+      color: inherit;
+      background-color: inherit;
+      height: 1px;
+      margin: 20px 0;
+      width: 100%;
     }
-
-}
-
+  
+    section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 4rem auto;
+      padding: 1rem;
+  
+      h2 {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      img {
+        width: 30%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        @media (max-width: 768px) {
+          width: 80%;
+        }
+      }
+    }
+  }
+  

@@ -86,32 +86,41 @@ body {
   background-color: #fffbf4;
 }
 
-/* index.html */
+/* index.scss */
 .header-content {
   text-align: center;
 }
 .header-content h1 {
-  font-size: 2.5rem; /* Ajuste opcional si necesitas darle estilo */
+  font-size: 2.5rem;
 }
 .header-content .centrado-negrita {
   font-weight: bold;
 }
 .header-content .carousel-inner img {
-  object-fit: cover; /* Mantén proporciones y recorta el exceso */
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 @media (max-width: 768px) {
   .header-content .carousel-inner img {
-    height: 300px; /* Ajuste de altura menor en pantallas pequeñas */
+    height: 300px;
   }
 }
 .header-content .carousel-control-prev button, .header-content .carousel-control-next button {
-  display: block; /* Opcional: estilos para los controles */
+  display: block;
 }
 .header-content .izquierda-reducido {
   text-align: left;
   width: 45%;
   font-size: 400%;
   margin-left: 5%;
+}
+@media (max-width: 768px) {
+  .header-content .izquierda-reducido {
+    width: 90%;
+    font-size: 200%;
+    margin-left: 5%;
+  }
 }
 .header-content .linea-horizontal {
   border: none;
@@ -121,6 +130,36 @@ body {
   height: 1px;
   margin: 20px 0;
   width: 100%;
+}
+.header-content section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem auto;
+  padding: 1rem;
+}
+.header-content section h2 {
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.header-content section img {
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.header-content section img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .header-content section img {
+    width: 80%;
+  }
 }
 
 /* asi funciona.html*/
@@ -198,46 +237,72 @@ body.nuestros-servicios .melamina-img {
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 body.nuestros-servicios .servicios-list {
   text-align: center;
   font-weight: bold;
-  font-size: 120%;
-  margin-top: 60px;
+  font-size: 1.2rem;
+  margin-top: 3.75rem;
   list-style: none;
   padding: 0;
 }
-
 body.nuestros-servicios .servicios-list li {
-  margin: 10px 0;
+  margin: 0.625rem 0;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
 }
-
+body.nuestros-servicios .servicios-list li:hover {
+  background-color: #e2e6ea;
+}
 body.nuestros-servicios .opiniones {
-  font-size: 300%;
-  margin-top: 80px;
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  text-align: center;
+  font-weight: bold;
 }
-
 body.nuestros-servicios .opinion {
   background-color: #ececec;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
   width: 70%;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
-
-body.nuestros-servicios .opinion-img {
+@media (max-width: 768px) {
+  body.nuestros-servicios .opinion {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+body.nuestros-servicios .opinion .opinion-img {
   width: 60%;
   height: auto;
+  border-radius: 0.75rem;
 }
-
-body.nuestros-servicios .opinion-text {
+@media (max-width: 768px) {
+  body.nuestros-servicios .opinion .opinion-img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+body.nuestros-servicios .opinion .opinion-text {
   width: 35%;
-  font-size: 150%;
-  margin-left: 10px;
+  font-size: 1.2rem;
+  margin-left: 0.625rem;
+}
+@media (max-width: 768px) {
+  body.nuestros-servicios .opinion .opinion-text {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 /* sobre nosotros.html */
